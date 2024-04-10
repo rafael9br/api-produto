@@ -22,7 +22,7 @@ const metricsMiddleware = promBundle({
 app.use(metricsMiddleware);
 app.use(config.middlewares.healthMid);
 app.use('/', config.routers);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-service', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
